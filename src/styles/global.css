@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
 	/* body {
 		transition: background-color 0.5s ease;
 	} */
+
+	* {
+		font-family: 'Inknut Antiqua', serif;
+		font-weight: 400;
+		font-style: normal;
+	}
 
 	.prose code {
 		@apply text-base;
@@ -23,8 +29,8 @@
 
 	html.dark .shiki,
 	html.dark .shiki span {
-	  color: var(--shiki-dark) !important;
-	  background-color: theme(colors.gray.900) !important;
+		color: var(--shiki-dark) !important;
+		background-color: theme(colors.gray.900) !important;
 	}
 }
 
