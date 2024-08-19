@@ -13,15 +13,15 @@ export const getPosts = async (max?: number) => {
 		.slice(0, max)
 }
 
-export const getTags = async () => {
+export const getTags: () => Promise<string[]> = async () => {
 	const posts = await getCollection('blog')
-	const tags = new Set()
+	const tags = new Set<string>()
 	posts.forEach((post) => {
 		post.data.tags.forEach((tag) => {
 			tags.add(tag.toLowerCase())
 		})
 	})
-
+	console.log(tags)
 	return Array.from(tags)
 }
 
